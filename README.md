@@ -5,12 +5,12 @@ Konstrukt is coded for the TI-84 Plus CE. It may not function correctly on other
 
 ## Install 
 Copy 
-  - Cesium.8ek (Note: this will not work. You will have to download Cesium from the Cemetech archives)
+  - Cesium.8xp
   - KNSVPR1.8xg
 
 To your calculator.
-Run Cesium from the apps menu once you have it installed. 
-Cesium is not required to run. 
+Run Cesium from the prgm menu to install it. It will be accesible from the apps menu, see the Cesuim section.
+Cesium is not required to use Konstrukt.
 
 Then, press 
   - 2nd
