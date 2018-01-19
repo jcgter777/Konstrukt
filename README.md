@@ -5,11 +5,12 @@ Konstrukt is coded for the TI-84 Plus CE. It may not function correctly on other
 
 ## Install 
 Copy 
-  - Cezium.8ek
+  - Cesium.8ek (Note: this will not work. You will have to download Cesium from the Cemetech archives)
   - KNSVPR1.8xg
 
 To your calculator.
-Run Cezium from the apps menu.
+Run Cesium from the apps menu once you have it installed. 
+Cesium is not required to run. 
 
 Then, press 
   - 2nd
@@ -22,8 +23,8 @@ And select KNSVRP1 from the list using your arrow keys.
 ## Usage
 
 To run Konstrukt, simpy press 
-  - prgm
-  - enter(x2)
+  - [prgm]
+  - [enter](x2)
   
 or, run "a".
   
@@ -44,7 +45,7 @@ To help me develop, email me at dame@psms164.com, or simply branch.
 
 ## Upcoming Updates
 
-Fixing graphng menus to work on the CE.
+Fixing graphing menus to work on the CE.
 
 Adding TI-83/TI-84+ support.
 
