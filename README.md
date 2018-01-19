@@ -47,3 +47,8 @@ To help me develop, email me at dame@psms164.com, or simply branch.
 Fixing graphng menus to work on the CE.
 
 Adding TI-83/TI-84+ support.
+
+## Credits
+
+  - Cesium by MateoConLuchega (https://www.cemetech.net/news.php?id=764)
+  - Original base program by Deep Toaster (http://www.ticalc.org/archives/files/fileinfo/427/42769.html)
