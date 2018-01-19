@@ -1,0 +1,1094 @@
+Normal
+Float
+Radian
+Func
+Connected
+Sequential
+a+bi
+Full
+FnOff 
+ZStandard
+RectGC
+CoordOn
+GridOff
+AxesOff
+LabelOff
+ExprOn
+Lbl 0
+Menu("KONSTRUKT TOOLS","MATH",1,"CONVERT",2,"CHEM",3,"QUADRATICS",4,"TRIANGLES",5,"BASE CONVERT",6,"UTILITIES",8,"QUIT",7)
+Lbl 8
+Menu("","SCORE CALCULATOR",98,"NOTES",97,"SETTINGS",96,"BACK",0
+Lbl 98
+prgmSCORECAL
+Goto 8
+Lbl 97
+Asm(prgmNOTES
+Goto 8
+Lbl 96
+prgmSET
+Goto 8
+Lbl 41
+ClrHome
+Disp "A=BH/2"
+Prompt B,H
+Pause BH/2
+Goto 11
+Lbl 42
+ClrHome
+Disp "A=BH"
+Prompt B,H
+Pause BH
+Goto 11
+Lbl 43
+ClrHome
+Disp "({Y1}+{Y2})H/2"
+Input "{Y1}=?",A
+Input "{Y2}=?",B
+Prompt H
+Pause (A+B)H/2
+Goto 11
+Lbl 44
+ClrHome
+Disp "NS^^2sin(360/N)(1-","cos(360/N))"
+Prompt N,S
+Pause NS^^2sin(360/N)(1-cos(360/N))
+Goto 11
+Lbl 45
+ClrHome
+Disp "piR^^2"
+Prompt R
+Pause piR^^2
+Goto 11
+Lbl 46
+ClrHome
+Disp "pi{r1}{r2}"
+Input "{r1}=?",R
+Input "{r2}=?",S
+Pause piRS
+Goto 11
+Lbl 51
+ClrHome
+Disp "BHW"
+Prompt B,H,W
+Pause BHW
+Goto 12
+Lbl 52
+ClrHome
+Disp "BHW/3"
+Prompt B,H,W
+Pause BHW/3
+Goto 12
+Lbl 53
+ClrHome
+Disp "piR^^2H"
+Prompt R,H
+Pause piR^^2H
+Goto 12
+Lbl 54
+ClrHome
+Disp "piR^^2H/3"
+Prompt R,H
+Pause piR^^2H/3
+Goto 12
+Lbl 55
+ClrHome
+Disp "4/3piR^^3"
+Prompt R
+Pause 4/3piR^^3
+Goto 12
+Lbl 56
+ClrHome
+Disp "4/3pi{r1}{r2}{r3}"
+Input "{r1}=?",R
+Input "{r2}=?",S
+Input "{r3}=?",T
+Pause 4/3piRST
+Goto 12
+Lbl 71
+ClrHome
+Disp "6S^^2"
+Prompt S
+Pause 6S^^2
+Goto 13
+Lbl 72
+ClrHome
+Disp "2(LW+WH+LH)"
+Prompt L,W,H
+Pause 2(LW+WH+LH)
+Goto 13
+Lbl 73
+ClrHome
+Disp "2piR(H+R)"
+Prompt R,H
+Pause 2piR(H+R)
+Goto 13
+Lbl 74
+ClrHome
+Disp "piRsqrt(H^^2+R^^2)+piR^^2"
+Prompt R,H
+Pause piRsqrt(H^^2+R^^2)+piR^^2
+Goto 13
+Lbl 75
+ClrHome
+Disp "4piR^^2"
+Prompt R
+Pause 4piR^^2
+Goto 13
+Lbl 76
+ClrHome
+Disp "F=faces,","S=side length"
+Prompt F,S
+Pause (F=4)sqrt(3)S^^2+(F=6)6S^^2+(F=8)2sqrt(3)S^^2+(F=12)30sin(72)(1-cos(72))S^^2+(F=20)5sqrt(3)S^^2
+Goto 13
+Lbl 1
+Menu("","AREA",11,"VOLUME",12,"SURFACE AREA",13,"TRIG",14,"TANGENT",15,"RIEMANN SUM",16,"ALGEBRA 1",58,"BACK",0)
+Lbl 2
+Menu("","LENGTH",21,"AREA",22,"VOLUME",23,"MASS",24,"SPEED",25,"TEMPERATURE",26,"BACK",0)
+Lbl 3
+"H 1.008He4.003Li6.941Be9.012B 10.81C 12.01N 14.01O 16.00F 19.00Ne20.18Na22.99Mg24.31Al26.98Si28.09P 30.97S 32.07Cl35.45Ar39.95K 39.10Ca40.08Sc44.96Ti47.87V 50.94Cr52.00Mn54.94Fe55.85Co58.93Ni58.69Cu63.55Zn65.41Ga69.72Ge72.64As74.92Se78.96Br79.90Kr83.80Rb85.47Sr87.62Y 88.91Zr91.22Nb92.91Mo95.94Ru101.1Rh102.9Pd106.4Ag107.9Cd112.4In114.8Sn118.7Sb121.8Te127.6I 126.9Xe131.3Cs132.9Ba137.3La138.9Ce140.1Pr140.9Nd144.2Sm150.4Eu152.0Gd157.3Tb158.9Dy162.5Ho164.9Er167.3Tm168.9Yb173.0Lu175.0Hf178.5Ta180.9W 183.8Re186.2Os190.2Ir192.2Pt195.1Au197.0Hg200.6Tl204.4Pb207.2Bi209.0Th232.0Pa231.0U 238.0"->Str1
+Menu("","ELEMENTS",31,"HALF-LIFE",32,"MOLES",33,"COMPOUNDS",34,"COMBUSTION",35,"FACTOR",36,"BACK",0)
+Lbl 4
+ClrHome
+Disp "Y=AX^^2+BX+C"
+Prompt A
+Prompt B
+Prompt C
+~B/2/A->H
+C-B^^2/4/A->K
+(sqrt(B^^2-4AC)-B)/2/A->R
+(~B-sqrt(B^^2-4AC))/2/A->S
+{0,1}->L1
+{0,A}->L2
+LinReg(ax+b) {Y1}
+{0,B}->L2
+LinReg(ax+b) {Y2}
+{0,C}->L2
+LinReg(ax+b) {Y3}
+Equ>String({Y1},Str4)
+Equ>String({Y2},Str5)
+Equ>String({Y3},Str6)
+"Y="->Str1
+If A-1
+Str1+sub(Str4,1,length(Str4)-3)->Str1
+Str1+"X^^2"->Str1
+"X"->Str7
+If abs(B)-1
+sub(Str5,(B<0)+1,length(Str5)-(B<0)-3)+Str7->Str7
+If B>0
+Str1+"+"+Str7->Str1
+If B<0
+Str1+"-"+Str7->Str1
+If C>0
+Str1+"+"+sub(Str6,1,length(Str6)-3)->Str1
+If C<0
+Str1+"-"+sub(Str6,2,length(Str6)-4)->Str1
+{0,H}->L2
+LinReg(ax+b) {Y1}
+{0,K}->L2
+LinReg(ax+b) {Y2}
+Equ>String({Y1},Str5)
+Equ>String({Y2},Str6)
+"Y="->Str2
+If A-1
+Str2+sub(Str4,1,length(Str4)-3)->Str2
+If H>0
+Str2+"(X-"+sub(Str5,1,length(Str5)-3)+")^^2"->Str2
+If H<0
+Str2+"(X+"+sub(Str5,2,length(Str5)-4)+")^^2"->Str2
+If H=0
+Str2+"X^^2"->Str2
+If K>0
+Str2+"+"+sub(Str6,1,length(Str6)-3)->Str2
+If K<0
+Str2+"-"+sub(Str6,2,length(Str6)-4)->Str2
+If imag(R)imag(S)=0
+Then
+	{0,R}->L2
+	LinReg(ax+b) {Y1}
+	{0,S}->L2
+	LinReg(ax+b) {Y2}
+	Equ>String({Y1},Str5)
+	Equ>String({Y2},Str6)
+	"Y="->Str3
+	If A-1
+	Str3+sub(Str4,1,length(Str4)-3)->Str3
+	If R>0
+	Str3+"(X-"+sub(Str5,1,length(Str5)-3)+")"->Str3
+	If R<0
+	Str3+"(X+"+sub(Str5,2,length(Str5)-4)+")"->Str3
+	If not(R)
+	Str3+"X"->Str3
+	If S>0
+	Str3+"(X-"+sub(Str6,1,length(Str6)-3)+")"->Str3
+	If S<0
+	Str3+"(X+"+sub(Str6,2,length(Str6)-4)+")"->Str3
+	If Rnot(S)
+	Str3+"X"->Str3
+	If not(S)not(R)
+	Str3+"^^2"->Str3
+End
+FnOff 
+ClrDraw
+Disp "GENERAL FORM:"
+Disp Str1
+Pause 
+Disp "VERTEX FORM:"
+Disp Str2
+Pause 
+Disp "FACTORED FORM:"
+If imag(R) or imag(S)
+Then
+	Disp "NONEXISTENT"
+Else
+	Disp Str3
+End
+Pause 
+Disp "Y-INTERCEPT: ",C
+Disp "VERTEX:",H,K
+Pause 
+Disp "X-INTERCEPTS:"
+If not(imag(R))not(imag(S))
+Then
+	If fPart(R) or fPart(S)
+	Then
+		If fPart(sqrt(B^^2-4AC))
+		Then
+			Disp "(",~B,"+sqrt(",B^^2-4AC,"))/",2A," OR (",~B,"-sqrt(",B^^2-4AC,"))/",2A
+		Else
+			Disp ~B+sqrt(B^^2-4AC),"/",2A," OR ",~B-sqrt(B^^2-4AC),"/",2A
+		End
+		Pause 
+	Else
+		Disp "OR ",S
+	End
+Else
+	Disp "NONEXISTENT"
+End
+Pause 
+Goto 0
+Lbl 5
+Degree
+ClrDraw
+Line(1,5,~7,~2)
+Line(~7,~2,5,~2)
+Line(5,~2,1,5)
+Text(18,32,"a")
+Text(20,63,"b")
+Text(38,45,"c")
+Text(30,61,"A")
+Text(30,27,"B")
+Text(18,50,"C")
+Pause 
+{0}->|LTRIAN
+"  a b c     A B C "->Str1
+For(A,1,3
+	ClrHome
+	Disp "PROVIDE THREE OF"," THE FOLLOWING:","","SIDES     ANGLES",sub(Str1,2,16)," -"
+	2->B
+	Repeat K=105
+		getKey->K
+		If K
+		Then
+			Output(6,B," ")
+			B-2(K=24)+2(K=26)->B
+			B+16not(B)+4(B=8)-4(B=10)-16(B=18)->B
+			Output(6,B,"-")
+			If sub(Str1,B,1)=">"
+			0->K
+		End
+	End
+	sub(Str1,B+1,1)+"="->Str2
+	Input Str2,C
+	If C>0
+	Then
+		augment(|LTRIAN,{B,C})->|LTRIAN
+		sub(Str1,1,B-1)+">"+sub(Str1,B+1,17-B)->Str1
+	Else
+		A-1->A
+		Disp " INVALID VALUE!"
+	End
+End
+{|LTRIAN(2),|LTRIAN(4),|LTRIAN(6)}->|LTMPRR
+ClrHome
+If sum(|LTMPRR<7)=3
+Then
+	For(D,2,6,2)
+		If |LTRIAN(D)=2
+		|LTRIAN(D+1)->A
+		If |LTRIAN(D)=4
+		|LTRIAN(D+1)->B
+		If |LTRIAN(D)=6
+		|LTRIAN(D+1)->C
+	End
+	If A+B>C and B+C>A and C+A>B
+	Then
+		Disp "A=",cos^-1((B^^2+C^^2-A^^2)/(2BC)),"B=",cos^-1((C^^2+A^^2-B^^2)/(2CA)),"C=",cos^-1((A^^2+B^^2-C^^2)/(2AB)),"Area="
+		Output(8,1,ABsin(cos^-1((A^^2+B^^2-C^^2)/(2AB)))/2)
+		Pause 
+	End
+End
+If sum(|LTMPRR<7)=2
+Then
+	{|LTRIAN(3),|LTRIAN(5),|LTRIAN(7)}->|LTSORT
+	SortD(|LTMPRR,|LTSORT)
+	If |LTMPRR(1)!=|LTMPRR(2)+8 and |LTMPRR(1)!=|LTMPRR(3)+8 and |LTSORT(1)<180
+	Then
+		sub("aCB   bCA   cBA",3|LTMPRR(1)-35,3)->Str1
+		sqrt(|LTSORT(2)^^2+|LTSORT(3)^^2-2|LTSORT(2)|LTSORT(3)cos(|LTSORT(1)))->S
+		sin^-1(|LTSORT(2)sin(|LTSORT(1))/S)->A
+		Disp sub(Str1,1,1)+"=",S,sub(Str1,2,1)+"=",A,sub(Str1,3,1)+"=",180-A-|LTSORT(1),"Area="
+		Output(8,1,|LTSORT(2)|LTSORT(3)sin(|LTSORT(1))/2)
+		Pause 
+	End
+End
+If sum(|LTMPRR<7)=1
+Then
+	{|LTRIAN(3),|LTRIAN(5),|LTRIAN(7)}->|LTSORT
+	SortA(|LTMPRR,|LTSORT)
+	If |LTSORT(2)+|LTSORT(3)<180
+	Then
+		0->A
+		0->B
+		0->C
+		For(D,2,3)
+			If |LTMPRR(D)=12
+			|LTSORT(D)->A
+			If |LTMPRR(D)=14
+			|LTSORT(D)->B
+			If |LTMPRR(D)=16
+			|LTSORT(D)->C
+		End
+		If A=0
+		Then
+			"A="->Str1
+			180-B-C->A
+		End
+		If B=0
+		Then
+			"B="->Str1
+			180-A-C->B
+		End
+		If C=0
+		Then
+			"C="->Str1
+			180-A-B->C
+		End
+		sub("bc  ac  ab",2|LTMPRR(1)-3,2)->Str2
+		For(D,1,2)
+			round(sin(expr(sub("ABC",inString("abc",sub(Str2,D,1)),1)))|LTSORT(1)/sin(expr(sub(" A B C",|LTMPRR(1),1))),8)->|LTSIDE(D)
+			Disp sub(Str2,D,1)+"=",|LTSIDE(D)
+		End
+		Disp Str1,expr(sub(Str1,1,1)),"Area="
+		Output(8,1,prod(|LTSIDE)sin(expr(sub(" A B C",|LTMPRR(1),1)))/2)
+		Pause 
+	End
+End
+Radian
+Goto 0
+Lbl 6
+1->A
+ClrHome
+Disp "BASE:           ","+-+","!2!6 8 16 ROMAN","+-+"
+Repeat K=105
+	getKey->K
+	If K
+	Then
+		A-(K=24)+(K=26)+5(K=24 and A=1)-5(K=26 and A=5)->B
+		If A<4
+		Then
+			Output(2,2A-1,"   ")
+			Output(3,2A-1," ")
+			Output(3,2A+1," ")
+			Output(4,2A-1,"   ")
+		End
+		If A=4
+		Then
+			Output(2,7,"    ")
+			Output(3,7," 16 ")
+			Output(4,7,"    ")
+		End
+		If A=5
+		Then
+			Output(2,10,"       ")
+			Output(3,10," ROMAN ")
+			Output(4,10,"       ")
+		End
+		If B<4
+		Then
+			Output(2,2B-1,"+-+")
+			Output(3,2B-1,"!")
+			Output(3,2B+1,"!")
+			Output(4,2B-1,"+-+")
+		End
+		If B=4
+		Then
+			Output(2,7,"+--+")
+			Output(3,7,"!16!")
+			Output(4,7,"+--+")
+		End
+		If B=5
+		Then
+			Output(2,10,"+-----+")
+			Output(3,10,"!ROMAN!")
+			Output(4,10,"+-----+")
+		End
+		B->A
+	End
+End
+If A=1
+Disp "BINARY:"
+If A=2
+Disp "HEXAL:"
+If A=3
+Disp "OCTAL:"
+If A=4
+Disp "HEXADECIMAL:"
+If A<5
+Then
+	expr(sub("02060816",2A-1,2))->A
+	Input "",Str1
+	0->B
+	If not(inString(Str1,"."))
+	Str1+"."->Str1
+	For(C,1,length(Str1))
+		If not(inString(sub(".0123456789ABCDEF",1,A+1),sub(Str1,C,1)))
+		Then
+			Pause "INVALID ENTRY!"
+			length(Str1)+1->C
+		Else
+			If sub(Str1,C,1)!="."
+			B+(inString("0123456789ABCDEF",sub(Str1,C,1))-1)A^(inString(Str1,".")-C-(inString(Str1,".")>C))->B
+		End
+	End
+	If C!=length(Str1)+2
+	Then
+		Disp "DECIMAL:",B
+		Pause 
+	End
+Else
+	1->I
+	5->V
+	10->X
+	50->L
+	100->C
+	500->D
+	1000->M
+	Input "ROMAN NUMERAL:  ",Str1
+	0->N
+	For(O,1,length(Str1))
+		If not(inString("IVXLCDM",sub(Str1,O,1)))
+		Then
+			Pause "INVALID ENTRY!"
+			length(Str1)+1->O
+		Else
+			N+expr(sub(Str1,O,1))->N
+			If O!=length(Str1
+			Then
+				If expr(sub(Str1,O,1))<expr(sub(Str1,O+1,1))
+				N-2expr(sub(Str1,O,1))->N
+			End
+		End
+	End
+	If O!=length(Str1)+2
+	Then
+		Disp "ARABIC NUMERAL:",N
+		Pause 
+	End
+End
+Goto 0
+Lbl 7
+ClrHome
+Disp "1098 LINES OF CODE"
+Return
+Lbl 11
+Menu("","TRIANGLE",41,"PARALLELOGRAM",42,"TRAPEZOID",43,"REGULAR GON",44,"CIRCLE",45,"ELLIPSE",46,"BACK",1)
+Lbl 12
+Menu("","PRISM",51,"PYRAMID",52,"CYLINDER",53,"CONE",54,"SPHERE",55,"ELLIPSOID",56,"BACK",1)
+Lbl 13
+Menu("","CUBE",71,"RECTANGULAR",72,"CYLINDER",73,"CONE",74,"SPHERE",75,"REGULAR HEDRON",76,"BACK",1)
+Lbl 14
+ClrDraw
+Text(0,0,"sin(theta)csc(theta)=1")
+Text(6,0,"cos(theta)sec(theta)=1")
+Text(12,0,"tan(theta)cot(theta)=1")
+Text(18,0,"cos(theta)tan(theta)=sin(theta)")
+Text(24,0,"sin(theta)cot(theta)=cos(theta)")
+Text(30,0,"sin(theta)^^2+cos(theta)^^2=1")
+Text(36,0,"tan(theta)^^2+1=sec(theta)^^2")
+Text(42,0,"cot(theta)^^2+1=csc(theta)^^2")
+Text(48,0,"cos(A+B)=cos(A)cos(B)")
+Text(54,33,"-sin(A)sin(B)")
+Pause 
+ClrDraw
+Text(0,0,"cos(A-B)=cos(A)cos(B)")
+Text(6,33,"+sin(A)sin(B)")
+Text(12,0,"sin(A+B)=sin(A)cos(B)")
+Text(18,31,"+cos(A)sin(B)")
+Text(24,0,"sin(A-B)=sin(A)cos(B)")
+Text(30,31,"-cos(A)sin(B)")
+Text(40,0,"tan(A+B)=")
+Text(36,33,"tan(A)+tan(B)")
+Line(~3,~4,7.2,~4)
+Text(44,33,"1-tan(A)tan(B)")
+Pause 
+ClrDraw
+Text(4,0,"tan(A-B)=")
+Text(0,33,"tan(A)-tan(B)")
+Line(~3,7.7,7.2,7.7)
+Text(8,33,"tan(A)tan(B)+1")
+Text(14,0,"cos(2theta)=cos(theta)^^2-sin(theta)^^2")
+Text(20,25,"=2cos(theta)^^2-1")
+Text(26,25,"=1-2sin(theta)^^2")
+Text(32,0,"sin(2theta)=2sin(theta)cos(theta)")
+Text(42,0,"tan(2theta)=")
+Text(38,29,"2tan(theta)")
+Line(~3.8,~4.5,2.8,~4.5)
+Text(46,29,"1-tan(theta)^^2")
+Pause 
+ClrDraw
+Text(4,0,"cos(")
+Text(0,14,"theta")
+Line(~7,7.7,~6.6,7.7)
+Text(8,14,2)
+Text(4,18,")=+sqrt(")
+Line(~4.7,7,~4.3,7)
+Text(0,36,"cos(theta)+1")
+Line(~2.3,7.7,3.4,7.7)
+Text(8,36,2)
+Text(4,65,")")
+Text(18,0,"sin(")
+Text(14,12,"theta")
+Line(~7.4,3.2,~7,3.2)
+Text(22,12,2)
+Text(18,16,")=+sqrt(")
+Line(~5.1,2.6,~4.7,2.6)
+Text(14,34,"1-cos(theta)")
+Line(~2.8,3.2,3,3.2)
+Text(22,34,2)
+Text(18,63,")")
+Text(32,0,"tan(")
+Text(28,14,"theta")
+Line(~7,~1.3,~6.6,~1.3)
+Text(36,14,2)
+Text(32,18,")=+sqrt(")
+Line(~4.7,~2,~4.3,~2)
+Text(28,36,"1-cos(theta)")
+Line(~2.3,~1.3,3.4,~1.3)
+Text(36,36,"cos(theta)+1")
+Text(32,65,")")
+Text(46,21,"=")
+Text(42,25,"sin(theta)")
+Line(~4.7,~5.8,1,~5.8)
+Text(50,25,"cos(theta)+1")
+Text(46,54,"=")
+Text(42,58,"1-cos(theta)")
+Line(2.3,~5.8,8,~5.8)
+Text(50,58,"sin(theta)")
+Pause 
+ClrDraw
+Text(0,0,"sin(theta)=cos(90^^o-theta)")
+Text(6,0,"cos(theta)=sin(90^^o-theta)")
+Text(12,0,"tan(theta)=cot(90^^o-theta)")
+Text(18,0,"csc(theta)=sec(90^^o-theta)")
+Text(24,0,"sec(theta)=csc(90^^o-theta)")
+Text(30,0,"cot(theta)=tan(90^^o-theta)")
+Pause 
+Goto 1
+Lbl 15
+ClrHome
+Input "{Y1}=",Str1
+Str1->{Y1}
+FnOn 1
+Input "X=",A
+round(nDeriv({Y1},X,A),8)->B
+{Y1}(A)-AB->A
+{0,1}->L1
+{A,B+A}->L2
+LinReg(ax+b) {Y2}
+Equ>String({Y2},Str1)
+inString(Str1,"+~")->A
+inString(Str1,"+0")->B
+If A
+sub(Str1,1,A-1)+"-"+sub(Str1,A+2,length(Str1)-A-1)->Str1
+If B
+sub(Str1,1,B-1)->Str1
+String>Equ(Str1,{Y2})
+AxesOn
+DispGraph
+Pause Str1
+FnOff 
+AxesOff
+Goto 1
+Lbl 16
+ClrHome
+Input "{Y1}=",Str1
+Str1->{Y1}
+Input "Xmin=",A
+Input "Xmax=",B
+Input "DIVISIONS: ",C
+(B-A)/C->C
+0->D
+0->E
+0->F
+For(G,A,B-C,C)
+	D+C{Y1}(G)->D
+	E+C{Y1}(G+C/2)->E
+End
+D-C{Y1}(A)+C{Y1}(B)->F
+If C<0
+Then
+	F->G
+	D->F
+	G->D
+End
+If A!=B
+Then
+	min({A,B})->Xmin
+	max({A,B})->Xmax
+	AxesOn
+	FnOn 1
+	ZoomFit
+	Shade(0,{Y1},Xmin,Xmax)
+	Shade({Y1},0,Xmin,Xmax)
+End
+ClrHome
+Disp "Left side=",D,"Midpoint=",E,"Right side=",F,"Simpson's rule="
+Output(8,1,(D+F+4E)/6)
+Pause 
+FnOff 
+ZStandard
+AxesOff
+Goto 1
+Lbl 21
+{1000,100,1,.001,39.3700787,3.2808399,1.0936133,.000621371192}->|LUNIT
+ClrDraw
+For(D,4,51,47)
+	Text(0,D-4,">mm")
+	Text(6,D,"cm")
+	Text(12,D,"m")
+	Text(18,D,"km")
+	Text(24,D,"in")
+	Text(30,D,"ft")
+	Text(36,D,"yd")
+	Text(42,D,"mi")
+End
+Goto 20
+Lbl 22
+{10000,1,.01,.000001,1550.0031,1.19599005,.000247105381,.000000386102159}->|LUNIT
+ClrDraw
+For(D,4,51,47)
+	Text(0,D-4,">cm^^2")
+	Text(6,D,"m^^2")
+	Text(12,D,"are")
+	Text(18,D,"km^^2")
+	Text(24,D,"in^^2")
+	Text(30,D,"yd^^2")
+	Text(36,D,"acr")
+	Text(42,D,"mi^^2")
+End
+Goto 20
+Lbl 23
+{1000,1,.001,61.0237441,33.8140227,.264172052,.0353146667,.0283775918}->|LUNIT
+ClrDraw
+For(D,4,51,47)
+	Text(0,D-4,">cc")
+	Text(6,D,"L")
+	Text(12,D,"m^^3")
+	Text(18,D,"in^^3")
+	Text(24,D,"oz")
+	Text(30,D,"gal")
+	Text(36,D,"ft^^3")
+	Text(42,D,"bus")
+End
+Goto 20
+Lbl 24
+{1000000,1000,1,.001,35.2739619,2.20462262,.00110231131,.000984206528}->|LUNIT
+ClrDraw
+For(D,4,51,47)
+	Text(0,D-4,">mg")
+	Text(6,D,"g")
+	Text(12,D,"kg")
+	Text(18,D,"T")
+	Text(24,D,"oz")
+	Text(30,D,"lb")
+	Text(36,D,"sT")
+	Text(42,D,"lT")
+End
+Goto 20
+Lbl 25
+{100,1,.001,3.6,39.3700787,3.2808399,.000621371192,2.23693629}->|LUNIT
+ClrDraw
+For(D,4,51,47)
+	Text(0,D-4,">cm/s")
+	Text(6,D,"m/s")
+	Text(12,D,"kmps")
+	Text(18,D,"kmph")
+	Text(24,D,"in/s")
+	Text(30,D,"ft/s")
+	Text(36,D,"mps")
+	Text(42,D,"mph")
+End
+Goto 20
+Lbl 26
+Menu("","^^oC>F",01,"^^oF>C",02,"^^oC>K",03,"K>^^oC",04,"^^oF>K",05,"K>^^oF",06,"Back",2)
+Lbl 01
+ClrHome
+Input "^^oC=?",C
+Pause 9C/5+32
+Goto 2
+Lbl 02
+ClrHome
+Input "^^oF=?",F
+Pause 5(F-32)/9
+Goto 2
+Lbl 03
+ClrHome
+Input "^^oC=?",C
+Pause C+273.16
+Goto 2
+Lbl 04
+ClrHome
+Prompt K
+Pause K-273.16
+Goto 2
+Lbl 05
+ClrHome
+Input "^^oF=?",F
+Pause 5(F-32)/9+273.16
+Goto 2
+Lbl 06
+ClrHome
+Prompt K
+Pause 9(K-273.16)/5+32
+Goto 2
+Lbl 20
+1->A
+1->B
+0->C
+" "->Str1
+While C!=45 and C!=105
+	0->C
+	Repeat C
+		getKey->C
+	End
+	If C=21 or C=31
+	Then
+		Text(6A-6,0,"   ")
+		A-(C=21)+(C=31)->A
+		If A=0
+		8->A
+		If A=9
+		1->A
+		Text(6A-6,0,">")
+	End
+	If C=25 or C=34
+	Then
+		Text(6B-6,47,"   ")
+		B-(C=25)+(C=34)->B
+		If B=0
+		8->B
+		If B=9
+		1->B
+		Text(6B-6,47,">")
+	End
+	If fPart(C/10)>=.2 and fPart(C/10)<=.4 and C>70 and C<103 and length(Str1)<12 or C=103not(inString(Str1,".")) and length(Str1)<12 and length(Str1)-1
+	Str1+sub("789       456       123       0.",C-71,1)->Str1
+	If C=23 and length(Str1)-1
+	sub(Str1,1,length(Str1)-1)->Str1
+	Text(57,3,"                                            ")
+	Text(57,3,Str1)
+	Text(57,51,"                                   ")
+	If length(Str1)-1
+	Text(57,51,expr(sub(Str1,2,length(Str1)-1))/|LUNIT(A)|LUNIT(B))
+End
+Goto 2
+Lbl 31
+1->A
+ClrHome
+Disp "?  SYMBOL   MASS","1    H     1.008","2    He    4.003","3    Li    6.941","4    Be    9.012","5    B     10.81","6    C     12.01"
+Output(8,1,"7    N     14.01")
+Repeat B=45 or B=105
+	getKey->B
+	If B
+	Then
+		A-(B=25 and A>1)+(B=34 and A<12)->A
+		For(C,2,8)
+			Output(C,1,"     "+sub(Str1,49A+7C-62,2)+"    "+sub(Str1,49A+7C-60,5))
+			Output(C,1,7A+C-8+(7A+C-8>42)+(7A+C-8>59)+6(7A+C-8>81))
+		End
+	End
+End
+Goto 3
+Lbl 32
+ClrHome
+Disp "FIND:",">HALF-LIFE"," ABSOLUTE AGE"," INITIAL VALUE"," REMAINING"
+1->A
+Repeat B=105
+	getKey->B
+	If B
+	Then
+		Output(A+1,1," ")
+		A-(B=25)+(B=34)+4(B=25 and A=1)-4(B=34 and A=4)->A
+		Output(A+1,1,">")
+	End
+End
+If A!=1
+Input "HALF-LIFE=",B
+If A!=2
+Input "ABSOLUTE AGE=",C
+If A!=3
+Input "INITIAL VALUE=",D
+If A!=4
+Input "REMAINING=",E
+If A=1
+Disp "HALF-LIFE=",Clog(2)/log(D/E)
+If A=2
+Disp "ABSOLUTE AGE=",Blog(D/E)/log(2)
+If A=3
+Disp "INITIAL VALUE=",E2^(C/B)
+If A=4
+Disp "REMAINING=",D2^(~C/B)
+Pause 
+Goto 3
+Lbl 33
+ClrHome
+Disp "INPUT EITHER THE","ATOMS/MOLECULES,","OR THE NUMBER OF","MOLES"
+Input "?=?",A
+If A<=|E10
+Pause A6.022|E23
+If A>|E10
+Pause A/6.022|E23
+Goto 3
+Lbl 34
+1->F
+{0}->|LELEME
+Asm(prgmLOW)
+ClrHome
+Disp "NUMBER DENOTES A","SUBSCRIPT, AND *","[recursiven]H2O IS HYDRATE,","E.G. CuCl2*5H2O;","FOR SMALL LETTER","PRESS ALPHA 2xmark"
+Input "FORMULA: ",Str3
+"   "+Str3+" "->Str3
+For(I,4,length(Str3)-1)
+	If sub(Str3,I,1)="(" and inString("23456789",sub(Str3,inString(Str3,")",I)+1,1))
+	expr(sub(Str3,inString(Str3,")",I)+1,1))->F
+	If sub(Str3,I,1)=")"
+	1->F
+	If sub(Str3,I,1)="*" and sub(Str3,length(Str3)-3,3)="H2O" and (I=length(Str3)-4 or inString("23456789",sub(Str3,length(Str3)-4,1)))
+	Then
+		length(Str3)->I
+		If dim(|LELEME)<25
+		Then
+			0->|LELEME(dim(|LELEME)+1)
+			18.016->|LELEME(dim(|LELEME)+1)
+			1->|LELEME(dim(|LELEME)+1)
+			If inString("23456789",sub(Str3,length(Str3)-3,1))
+			expr(sub(Str3,length(Str3)-3,1))->|LELEME(dim(|LELEME))
+		End
+	Else
+		If inString("ABCDEFGHIKLMNOPRSTUVWXYZ",sub(Str3,I,1))
+		Then
+			I+1->I
+			If inString("abcdefghilmnorstuy",sub(Str3,I,1))
+			Then
+				I+1->I
+				sub(Str3,I-2,2)->Str2
+			Else
+				sub(Str3,I-1,1)+" "->Str2
+			End
+			inString(Str1,Str2)->P
+			F->S
+			If inString("23456789",sub(Str3,I,1))
+			Then
+				I+1->I
+				Fexpr(sub(Str3,I-1,1))->S
+			End
+			0->K
+			For(J,2,dim(|LELEME)-2,3)
+				If |LELEME(J)=P
+				J->K
+			End
+			If K
+			Then
+				|LELEME(K+2)+S->|LELEME(K+2)
+			Else
+				P->|LELEME(dim(|LELEME)+1)
+				expr(sub(Str1,inString(Str1,Str2)+2,5))->|LELEME(dim(|LELEME)+1)
+				S->|LELEME(dim(|LELEME)+1)
+			End
+			I-1->I
+		End
+	End
+	If dim(|LELEME)=28
+	Then
+		length(Str3)->I
+		Pause "TOO MANY ATOMS!"
+		Goto 3
+	End
+End
+0->T
+For(I,3,dim(|LELEME)-1,3)
+	For(J,1,|LELEME(I+1))
+		T+|LELEME(I)->T
+	End
+End
+dim(|LELEME)-2->D
+25->dim(|LELEME)
+ClrDraw
+For(I,2,D,3)
+	If |LELEME(I)=0
+	Then
+		Text(2I-4,0,"H    O: ",1801.6|LELEME(I+2)/(|LELEME(3)|LELEME(4)+|LELEME(6)|LELEME(7)+|LELEME(9)|LELEME(10)+|LELEME(12)|LELEME(13)+|LELEME(15)|LELEME(16)+|LELEME(18)|LELEME(19)+|LELEME(21)|LELEME(22)+|LELEME(24)|LELEME(25)),"%")
+		Text(2I-2,4,"^^2")
+	Else
+		Text(2I-4,0,sub(Str1,|LELEME(I),2),": ",100|LELEME(I+1)|LELEME(I+2)/(|LELEME(3)|LELEME(4)+|LELEME(6)|LELEME(7)+|LELEME(9)|LELEME(10)+|LELEME(12)|LELEME(13)+|LELEME(15)|LELEME(16)+|LELEME(18)|LELEME(19)+|LELEME(21)|LELEME(22)+|LELEME(24)|LELEME(25)),"%")
+	End
+End
+Text(51,0,"TOTAL MASS: ",|LELEME(3)|LELEME(4)+|LELEME(6)|LELEME(7)+|LELEME(9)|LELEME(10)+|LELEME(12)|LELEME(13)+|LELEME(15)|LELEME(16)+|LELEME(18)|LELEME(19)+|LELEME(21)|LELEME(22)+|LELEME(24)|LELEME(25))
+0->S
+If inString(Str3,"NO3") or inString(Str3,"C2H3O2") or inString(Str3,"ClO3") or inString(Str3,"NH4") or inString(Str3,"Na") or inString(Str3,"K") or inString(Str3,"Rb") or inString(Str3,"Cs")
+1->S
+If inString(Str3,"Cl") or inString(Str3,"Br") or inString(Str3,"I")
+Then
+	1->S
+	If inString(Str3,"Ag") or inString(Str3,"Pb") or inString(Str3,"Hg2")
+	~1->S
+End
+If inString(Str3,"SO4")
+Then
+	1->S
+	If inString(Str3,"Ba") or inString(Str3,"Sr") or inString(Str3,"Ca") or inString(Str3,"Pb")
+	~1->S
+End
+If inString(Str3,"CO3") or inString(Str3,"CrO4") or inString(Str3,"OH") or inString(Str3,"PO4") or inString(Str3,"S")
+Then
+	0->Q
+	If inString(Str3,"S")
+	Then
+		If not(inString("bcegimnr",sub(Str3,inString(Str3,"S")+1,1)))
+		1->Q
+	End
+	If not(Q)
+	Then
+		For(I,1,109,2)
+			If inString(Str3,sub("BeMgAlCaScTiCrMnFeCoNiCuZnGaGeSrZrNbMoRuRhPdAgCdInSnSbBaLaCePrNdSmEuGdTbDyHoErTmYbLuHfTaReOsIrPtAuHgTlPbBiThPa",I,2))
+			~1->S
+		End
+		If inString(Str3,"V") or inString(Str3,"Y") or inString(Str3,"W") or inString(Str3,"U")
+		~1->S
+	End
+End
+"TYPE: "->Str2
+If S
+"SOLUBLE; "+Str2->Str2
+If S<0
+"IN"+Str2->Str2
+If Str3="   H2O "
+Then
+	Text(57,0,Str2,"MOLECULAR (WATER)")
+Else
+	If sub(Str3,4,1)="H" and sub(Str3,5,1)!="e"
+	Then
+		Text(57,0,Str2,"ACID")
+	Else
+		sub(Str3,4,1)+" "->Str4
+		If inString(Str1,sub(Str3,4,2))
+		sub(Str3,4,2)->Str4
+		If inString("HeB C N O F NeSiP S ClArAsSeBrKrTeI Xe",Str4)
+		Then
+			Text(57,0,Str2,"MOLECULAR")
+		Else
+			Text(57,0,Str2,"IONIC")
+		End
+	End
+End
+Pause 
+Goto 3
+Lbl 35
+ClrHome
+Input "HYDROCARBON: ",Str2
+Str2+"O"->Str2
+If sub(Str2,1,1)!="C" or not(inString(Str2,"H"))
+Then
+	Pause "NOT HYDROCARBON!"
+	Goto 3
+End
+For(A,1,length(Str2))
+	If not(inString("CHO0123456789",sub(Str2,A,1)))
+	Then
+		Pause "NOT HYDROCARBON!"
+		Goto 3
+	End
+End
+If sub(Str2,2,1)="H"
+Then
+	1->A
+Else
+	expr(sub(Str2,2,inString(Str2,"H")-2))->A
+End
+If sub(Str2,inString(Str2,"O")-1,1)="H"
+Then
+	1->B
+Else
+	expr(sub(Str2,inString(Str2,"H")+1,inString(Str2,"O")-inString(Str2,"H")-1))->B
+End
+sub(Str2,1,length(Str2)-1)->Str2
+0->C
+If inString(Str2,"O")
+Then
+	If inString(Str2,"O")=length(Str2)
+	Then
+		1->C
+	Else
+		expr(sub(Str2,inString(Str2,"O")+1,length(Str2)-inString(Str2,"O")))->C
+	End
+End
+If fPart(B/2)
+Then
+	4A->A
+	4B->B
+	4C->C
+	"4"+Str2->Str2
+End
+If fPart(B/4) or fPart(C/2)
+Then
+	2A->A
+	2B->B
+	2C->C
+	"2"+Str2->Str2
+End
+ClrHome
+Output(1,1,Str2+"+"+sub("1020304050607080901011121314151617181920212223242526272829303132333435363738394041424344454647484950",2(A+B/4-C/2)-1,(A+B/4-C/2>9)+1)+"Osmall2?"+sub("1020304050607080901011121314151617181920212223242526272829303132333435363738394041424344454647484950",2A-1,(A>9)+1)+"COsmall2+"+sub("1020304050607080901011121314151617181920212223242526272829303132333435363738394041424344454647484950",2B/2-1,(B/2>9)+1)+"Hsmall2O")
+Pause 
+Goto 3
+Lbl 36
+ClrHome
+Input "?=?",A
+If A<0
+Then
+	Pause "INVALID!"
+	Goto 1
+End
+A->B
+1->C
+{1}C
+{1}->L1
+While prod(L1)<A
+	C+1->C
+	While fPart(B/C)=0
+		B/C->B
+		augment(L1,{C})->L1
+	End
+End
+If A>1
+DeltaList(cumSum(L1)->L1
+If A=0
+{0}->L1
+Pause L1
+Goto 3
+Lbl 58
+Menu("","EXPONENTIAL CHANGE",59,"FIND EXPONENT",57,"BACK",1
+Lbl 59
+prgmEGAD
+Goto 58
+Lbl 57
+prgmEXPNFIND
+Goto 58
