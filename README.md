@@ -5,18 +5,18 @@ Konstrukt is coded for the TI-84 Plus CE. It may not function correctly on other
 
 ## Install 
 Copy 
-  - Cesium.8xp
+  - Cesium.8xp (You can't send this, just download it from the link below)
   - KNSVPR1.8xg
 
 To your calculator.
 Run Cesium from the prgm menu to install it. It will be accesible from the apps menu, see the Cesuim section.
 Cesium is not required to use Konstrukt.
 
-Then, press 
-  - 2nd
-  - mem
-  - 8
-  - right
+Thento ungroup, press 
+  - [2nd]
+  - [+]
+  - [8]
+  - [>]
 
 And select KNSVRP1 from the list using your arrow keys. 
 
@@ -24,9 +24,9 @@ And select KNSVRP1 from the list using your arrow keys.
 
 To run Konstrukt, simpy press 
   - [prgm]
-  - [enter](x2)
+  - [enter] x2
   
-or, run "a".
+or, run "prgmA".
   
 ## Settings
 To open settings, run Konstruckt, select Utitlites (7), and the Settings (3)
